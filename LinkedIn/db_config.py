@@ -1,0 +1,7 @@
+server = 'coregdanskdbserver.database.windows.net'
+database = 'MITeam'
+username = 'tobiasztalaj'
+password = 'vU?9eLd4GwV&?KXd'
+# password = 'Marzena!2#'
+driver = '{ODBC Driver 17 for SQL Server}'
+search_strings_file = 'C:\\Users\\tobia\\OneDrive\\Dokumenty\\Python_Code\\search_strings.txt'
