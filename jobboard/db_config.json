@@ -1,0 +1,7 @@
+{
+"server": "coregdanskdbserver.database.windows.net",
+"database": "MITeam",
+"username": "danielpawlak"
+"password": "yCy^WW8QU6Ft-Jj6",
+"driver": "{ODBC Driver 17 for SQL Server}",
+}
