@@ -110,6 +110,6 @@ def yahoo_scraper_func(file_name):
 
         if counter == 3:
             break
-    new_file_path = ('C:\\Users\\danie\\Desktop\\Test Data\\Master Template Credit {}.xlsx'.format(datetime.datetime.now().strftime("%d_%m_%y %H_%M_%S")))  
+    new_file_path = ('path\master_file_name {}.xlsx'.format(datetime.datetime.now().strftime("%d_%m_%y %H_%M_%S")))  
     df.to_excel(new_file_path, index = False)
     return new_file_path
