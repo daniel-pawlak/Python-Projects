@@ -7,13 +7,13 @@ from company_names_utilities import *
 from openpyxl import Workbook
 
 
-with open(r'C:\Users\danie\Desktop\Python\Scrapers\LinkedIn\db_config.json', 'r', encoding='utf-8') as f:
+with open(r'path\db_config.json', 'r', encoding='utf-8') as f:
     db_config = json.load(f)
 
-with open(r'C:\Users\danie\Desktop\Python\Scrapers\LinkedIn\competitors_names.json', 'r', encoding='utf-8') as f:
+with open(r'path\competitors_names.json', 'r', encoding='utf-8') as f:
     competitors_names_dict = json.load(f)
 
-with open(r'C:\Users\danie\Desktop\Python\Scrapers\LinkedIn\forbes_2000plus.txt', 'r', encoding='utf-8') as f:
+with open(r'path\forbes_2000plus.txt', 'r', encoding='utf-8') as f:
     company_names = f.read().split('\n')
 
 with pyodbc.connect('DRIVER='+db_config['driver']+';SERVER='+db_config['server']+';PORT=1433;DATABASE='+db_config['database']+';UID='+db_config['username']+';PWD='+db_config['password']) as cnxn:
