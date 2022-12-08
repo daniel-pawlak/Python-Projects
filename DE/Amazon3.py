@@ -15,7 +15,7 @@ from unidecode import unidecode
 from jobboard_scraper3 import JobboardScraper
 from openpyxl import Workbook
 from datetime import datetime, timedelta, date
-# from r'C:\Users\danie\Desktop\Python\Praca\Jobboard\jobboard_scraper_excel.py' import JobboardScraper
+# from r'path\jobboard_scraper_excel.py' import JobboardScraper
 # import sys
 # sys.path.append('.')
 # from jobboard_scraper import JobboardScraper
