@@ -157,7 +157,7 @@ def moodys_scraper_func(file_name):
     driver = webdriver.Chrome(path, chrome_options=opts)
 
     # login credentials
-    email = 'daniel.pawlak@manpowergroup.com'
+    email = 'add_an_email'  # put your email
     password = 'manpower0'
 
     # opening browser
@@ -167,7 +167,7 @@ def moodys_scraper_func(file_name):
     driver.get(url)
 
     # opening dictionary with companies links
-    my_dict_path = r'C:\Users\danie\Dropbox\Python\Scrapers\Moodys\Companies_links.json'
+    my_dict_path = r'path\Companies_links.json' # add correct path
     with open(my_dict_path, 'r', encoding='utf8') as f:
             my_dict = json.load(f)
 
@@ -410,10 +410,10 @@ def moodys_scraper_func(file_name):
     print('Processed values: ', counter, '\n')
 
     driver.close()
-    new_file_path = ('C:\\Users\\danie\\Desktop\\Test Data\\Master Template Credit Moodys {}.xlsx'.format(datetime.datetime.now().strftime("%d_%m_%y %H_%M_%S")))     # this path should be changed
+    new_file_path = ('path\file_name {}.xlsx'.format(datetime.datetime.now().strftime("%d_%m_%y %H_%M_%S")))     # this path should be changed
     df.to_excel(new_file_path, index = False)
     
     return new_file_path
 
-file_name = r'C:\Users\danie\Dropbox\Python\Scrapers\Yahoo\Master Template Credit Flash_0716_new.xlsx'      # this path should be changed
+file_name = r'path\master_file_name.xlsx'      # this path should be changed
 moodys_scraper_func(file_name)    
