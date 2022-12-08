@@ -21,11 +21,11 @@ def pdf_recognizer(pdf_name, row, directory, file_format):
     failures = 0
     row = row
     # Images source
-    imgs_dir_short = 'C:\\Users\\danie\\Desktop\\UPS - Examples\\'
+    imgs_dir_short = 'path'
     IMGS_DIR = imgs_dir_short + 'Images\\'        # may be changed
     custom_config = r'--oem 1 --psm 6'
     # Convert pdf to images
-    # IMG_DIR = 'C:\\Users\\danie\\Desktop\\UPS - Examples\\Files\\'      # may be changed
+    # IMG_DIR = 'path\\Files\\'      # may be changed
     IMG_FAIL_DIR = imgs_dir_short + 'Failures\\'      # may be changed
     IMG_PROPER_DIR = imgs_dir_short + 'Propers\\'      # may be changed
     poppler_path = r"C:\poppler-21.11.0\Library\bin"     # may be changed
@@ -34,7 +34,7 @@ def pdf_recognizer(pdf_name, row, directory, file_format):
         pages = convert_from_path(directory + '/' + pdf_name, poppler_path=poppler_path)
         num = 0
         for page in pages:
-            page.save(r"C:\Users\danie\Desktop\UPS - Examples\Images\{}{}.jpg".format(pdf_name, num))       # may be changed
+            page.save(r"path\Images\{}{}.jpg".format(pdf_name, num))       # may be changed
             num += 1
     else:
         copy(directory + '/' + pdf_name, IMGS_DIR)
@@ -87,7 +87,7 @@ def pdf_recognizer(pdf_name, row, directory, file_format):
         cnts = cnts[0] if len(cnts) == 2 else cnts[1]
         for c in cnts:
             cv2.drawContours(result, [c], -1, (255,255,255), 5)
-        cv2.imwrite(r"C:\Users\danie\Desktop\UPS - Examples\Images\{}".format(file_name), result)
+        cv2.imwrite(r"path\Images\{}".format(file_name), result)
 
         return result
 
@@ -287,7 +287,7 @@ def pdf_recognizer(pdf_name, row, directory, file_format):
     def rectangles_rec_ups(img_name, index_line_pos, index_sign_line_pos):
         # look for rectangles that have information whether it is marked as signed or not in case of having no common signature
         # read image into array
-        image_array = cv2.imread('C:\\Users\\danie\\Desktop\\UPS - Examples\\Images\\{}.jpg'.format(img_name))     # may be changed
+        image_array = cv2.imread('path\\Images\\{}.jpg'.format(img_name))     # may be changed
 
         # convering image to gray scale
         gray_scale_image = cv2.cvtColor(image_array, cv2.COLOR_BGR2GRAY)
@@ -1050,7 +1050,7 @@ def pdf_recognizer(pdf_name, row, directory, file_format):
                     page = convert_from_path(directory + '/' + file_name, poppler_path=poppler_path)
                     num = 0
                     for page in pages:
-                        page.save(r"C:\Users\danie\Desktop\UPS - Examples\Images\{}{}.jpg".format(file_name, num))       # may be changed
+                        page.save(r"path\Images\{}{}.jpg".format(file_name, num))       # may be changed
                         num += 1
 
                     file_name = "{}{}.jpg".format(file_name, k)
@@ -1131,11 +1131,11 @@ def file_loop(directory):
         else:
             continue
     current_hour = datetime.datetime.now().strftime('%H_%M_%S')        
-    file_path = 'C:/Users/danie/Dropbox/Python/Projects/ML/OCR/Summary_files_uipath_{}.xlsx'.format(current_hour)
+    file_path = 'path/Summary_files_uipath_{}.xlsx'.format(current_hour)
     
     excel_file = new_df.to_excel(file_path, index=False)
 
     return file_path
     # return excel_file
 
-file_loop("C:\\Users\\danie\\Desktop\\UPS - Examples\\Files\\CWA Examples\\N\\")
+file_loop("path\\N\\")
