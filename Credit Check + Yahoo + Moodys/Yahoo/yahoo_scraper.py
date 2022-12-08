@@ -125,10 +125,10 @@ def yahoo_scraper_func(file_name):
                     
         # if counter == 2:
         #     break
-    df.to_excel('Master Template Credit {}.xlsx'.format(datetime.datetime.now().strftime("%d_%m_%y %H_%M_%S"), index = False))
+    df.to_excel('master_file_name {}.xlsx'.format(datetime.datetime.now().strftime("%d_%m_%y %H_%M_%S"), index = False))
     print("Bag of empty includes: ", bag_of_empty)
     print('Number of unique values: ', counter)
 
-file_name = r'C:\Users\danie\Dropbox\Python\Scrapers\Credit Check + Yahoo + Moodys\Yahoo\Master Template Credit Flash_test.xlsx'
+file_name = r'path\master_file_name.xlsx'
 
 yahoo_scraper_func(file_name)
