@@ -24,13 +24,13 @@ import io
 class JobboardScraper:
 
     def __init__(self, country, jobboard, currency):
-        self.skills_path = r'C:\Users\danie\Desktop\Python\Praca\Jobboard\skills.txt'
-        self.db_config_path = r'C:\Users\danie\Desktop\Python\Praca\Jobboard\db_config.json'
-        self.locations_path = r'C:\Users\danie\Desktop\Python\Praca\Jobboard\locations.json'
-        self.companies_sectors_map_path = r'C:\Users\danie\Desktop\Python\Praca\Jobboard\companies_sectors_map.json'
-        self.companies_sectors_linkedin_path = r'C:\Users\danie\Desktop\Python\Praca\Jobboard\companies_sectors_linkedin_shaved.json'
-        self.isco_jobtitles_en_path = r'C:\Users\danie\Desktop\Python\Praca\Jobboard\isco_jobtitles_en.json'
-        self.isco_jobtitles_de_fr_it_path = r'C:\Users\danie\Desktop\Python\Praca\Jobboard\isco_jobtitles_de_fr_it.json'
+        self.skills_path = r'path\Jobboard\skills.txt'
+        self.db_config_path = r'path\Jobboard\db_config.json'
+        self.locations_path = r'path\Jobboard\locations.json'
+        self.companies_sectors_map_path = r'path\Jobboard\companies_sectors_map.json'
+        self.companies_sectors_linkedin_path = r'path\Jobboard\companies_sectors_linkedin_shaved.json'
+        self.isco_jobtitles_en_path = r'path\Jobboard\isco_jobtitles_en.json'
+        self.isco_jobtitles_de_fr_it_path = r'path\Jobboard\isco_jobtitles_de_fr_it.json'
 
         # self.skills_path = r'/home/tobiasz/python_scripts/skills.txt'
         # self.db_config_path = r'/home/tobiasz/python_scripts/db_config.json'
