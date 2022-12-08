@@ -44,14 +44,14 @@ def timer(func):
 
 @timer
 def moodys_scraper_func(file_name):
-    email = 'daniel.pawlak@manpowergroup.com'
-    password = 'manpower0'
+    email = 'add_email
+    password = 'add_pwd'
     url = 'https://www.moodys.com/'
     timeout = 20
     driver.maximize_window()
     driver.get(url)
 
-    my_dict_path = r'C:\Users\danie\Dropbox\Python\Scrapers\Moodys\Companies_links.json'
+    my_dict_path = r'path\Companies_links.json'
     with open(my_dict_path, 'r', encoding='utf8') as f:
             my_dict = json.load(f)
 
@@ -282,10 +282,10 @@ def moodys_scraper_func(file_name):
     print('Processed values: ', counter, '\n')
 
     driver.close()
-    new_file_path = ('C:\\Users\\danie\\Desktop\\Test Data\\Master Template Credit Moodys {}.xlsx'.format(datetime.datetime.now().strftime("%d_%m_%y %H_%M_%S")))  
+    new_file_path = ('path\final_file_name {}.xlsx'.format(datetime.datetime.now().strftime("%d_%m_%y %H_%M_%S")))  
     df.to_excel(new_file_path, index = False)
     
     return new_file_path
 
-file_name = r'C:\Users\danie\Dropbox\Python\Scrapers\Yahoo\Master Template Credit Flash_0716_new.xlsx'
+file_name = r'path\master_file_name.xlsx'
 moodys_scraper_func(file_name)    
