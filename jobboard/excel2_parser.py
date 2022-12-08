@@ -4,9 +4,9 @@ from itertools import islice
 from flashtext import KeywordProcessor
 from unidecode import unidecode
 
-# wb = load_workbook(r'C:\Users\danie\Desktop\test.xlsx') # Load in the workbook
+# wb = load_workbook(r'path\test.xlsx') # Load in the workbook
 # class ExcelScraper(JobboardScraper):
-wb = load_workbook(r'C:\Users\danie\Desktop\Python\Praca\Jobboard\SelectedCompanies - Top 50.xlsx')
+wb = load_workbook(r'path\SelectedCompanies - Top 50.xlsx')
 sheet = wb['Sheet1']
 df = pd.DataFrame(sheet.values)     # Convert Sheet to DataFrame
 data = sheet.values                 # Put the sheet values in `data`
@@ -22,7 +22,7 @@ for nums, row in enumerate(df.itertuples(), 1):
     full_description = df.at[int(nums), 'Description']
     
     skills = ''
-    skills_path = r'C:\Users\danie\Desktop\Python\Praca\Jobboard\skills.txt'
+    skills_path = r'path\skills.txt'
     with open(skills_path, 'r', encoding='utf8') as f:
         skills_list = f.read()
         skills_list = skills_list.split('\n')
