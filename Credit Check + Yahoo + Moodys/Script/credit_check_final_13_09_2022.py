@@ -324,14 +324,6 @@ def yahoo_scraper_func(df):
 
     ticker_dict = {}
 
-    # bag_of_useless = ['', 'Private', 'Foreign Owned', '-', 'n/a', 'Government', 'HSE.TO','GTES', ' ARD', \
-    #     'Privately held by MMJ Group Holdings Limited (MMJJF), an Austrailian-listed company.', "Gov't", 'None', \
-    #         'Non-Profit', '', 'Foreign Parent-9375.T ticker?', "State Gov't",  'GPS (The GAP)', 'Tribal Government', \
-    #             'Bankruptcy', 'Private Equity', 'Private?', 'Non-profit organization', 'N/a', 'Sumitomo Mitsui Trust Holdings Inc.', \
-    #                 '532540 (India: Bombay)', 'VLVLY (TICKER)  / VOLVY (MOODYS)', '2162 (JASDAQ)', 'RCRUY (parent)', 0, 'Province of Quebec', \
-    #                     'UTX', 'VLVY', 'Foreign Parent', 'Goverment', 'MIK', 'private', 'Foreign', 'RTIX/SRGA', 'SAMSNG', 'SEB SA', 'HSE', \
-    #                         'SIE', ' ', 'VSVS', 'VOLVY', 'BRK', '\xa0', 'HINDALCO', 'Fed Owned', 'AEXAY (parent)', 'C ', 'NEMTF', 'CSGN', \
-    #                             'SDF', ' LH', 'NEOS', 'GAS', 'CVIA', 'FCAU', 'ETH', 'JASN', 'IEP (Parent)', 'PRSC', 'CLGX']
     bag_of_useless = ['','Private', 'Foreign Owned', 'HSE.TO', ' ARD', '-', 0, 'Privately held by MMJ Group Holdings Limited (MMJJF), an Austrailian-listed company.',\
          'Government', "Gov't", 'None', 'Province of Quebec', 'UTX', 'VLVY', 'Foreign Parent', 'FLOW', 'HOME', 'BLL', 'Non-Profit', 'Goverment',\
              'MIK', 'RCRUY (parent)', 'FBHS', 'Foreign Parent-9375.T ticker?', "State Gov't", 'INOV', 'DAI.DE', 'NELES.HE', 'GPS (The GAP)',\
@@ -458,13 +450,6 @@ def yahoo_scraper_func(df):
 
 @timer
 def make_final_file(path, ps_name, rmps_name, can_name, us_name, master_name, ps_date_name, final_name):
-    # ps_name = 'PS Weekly Base Data File.xlsx'
-    # rmps_name = 'RMPS Weekly Base Data File.xlsx'
-    # can_name = 'Canada.csv'
-    # us_name = 'Detail.csv'
-    # master_name = 'Master Template Credit Flash_0716.xlsx'
-    # final_name = 'Concatenated File'
-
     # merge 3 files into one and export it
     df1 = open_ps(path, ps_name)
     df2 = open_rmps(path, rmps_name)
@@ -551,7 +536,5 @@ def make_final_file(path, ps_name, rmps_name, can_name, us_name, master_name, ps
     export_file(df_final, final_name, path)
 
 # path, ps_name, rmps_name, can_name, us_name, master_name, ps_date_name, final_name
-make_final_file('C:/Users/danie/Desktop/Daniel/Praca/RPA/Credit Check/Files/OneDrive_1_8-29-2022/', 'PS Weekly Base Data File.xlsx', 'RMPS Weekly Base Data File.xlsx', 
-                'Canada.csv', 'Detail.csv', 'August 2022 Credit Pre-Flash 082222 w RM (1).xlsx', 'PS - Weekly Last Date File.xlsx', 'Concatenated File')
-# make_final_file('C:/Users/danie/Desktop/Inne/RPA/Credit Check/Files/', 'PS Weekly Base Data File.xlsx', 'RMPS Weekly Base Data File.xlsx', 
-#                 'Canada.csv', 'Detail.csv', 'Master Template Credit Flash_0716.xlsx', 'PS - Weekly Last Date File.xlsx', 'Concatenated File')
+make_final_file('path', 'psbase.xlsx', 'rmbase.xlsx', 
+                'can.csv', 'det.csv', 'master.xlsx', 'psdate.xlsx', 'Final File')
