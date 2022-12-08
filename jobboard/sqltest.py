@@ -2,7 +2,7 @@ import pyodbc
 server = 'coregdanskdbserver.database.windows.net'
 database = 'MITeam'
 username = 'danielpawlak'
-password = 'yCy^WW8QU6Ft-Jj6'   
+password = 'pwd'   
 driver= '{ODBC Driver 17 for SQL Server}'
 
 with pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password) as conn:
