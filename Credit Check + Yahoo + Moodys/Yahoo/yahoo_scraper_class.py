@@ -129,13 +129,13 @@ class yahoo_scraper_class:
                         
             # if counter == 2:
             #     break
-        df.to_excel('Master Template Credit {}.xlsx'.format(datetime.datetime.now().strftime("%d_%m_%y %H_%M_%S"), index = False))
+        df.to_excel('master_file_name {}.xlsx'.format(datetime.datetime.now().strftime("%d_%m_%y %H_%M_%S"), index = False))
         print("Bag of empty includes: ", bag_of_empty)
         print('Number of unique values: ', counter)
 
 
 
-file_name = 'Master Template Credit Flash_0716.xlsx'
+file_name = 'master_file_name.xlsx'
 
 yahoo = yahoo_scraper_class(file_name)
 yahoo.yahoo_scraper_func()
