@@ -24,21 +24,13 @@ import io
 class JobboardScraper:
 
     def __init__(self, country, jobboard, currency):
-        self.skills_path = r'C:\Users\danie\Desktop\Python\Praca\Jobboard\skills.txt'
-        self.db_config_path = r'C:\Users\danie\Desktop\Python\Praca\Jobboard\db_config.json'
-        self.locations_path = r'C:\Users\danie\Desktop\Python\Praca\Jobboard\locations.json'
-        self.companies_sectors_map_path = r'C:\Users\danie\Desktop\Python\Praca\Jobboard\companies_sectors_map.json'
-        self.companies_sectors_linkedin_path = r'C:\Users\danie\Desktop\Python\Praca\Jobboard\companies_sectors_linkedin_shaved.json'
-        self.isco_jobtitles_en_path = r'C:\Users\danie\Desktop\Python\Praca\Jobboard\isco_jobtitles_en.json'
-        self.isco_jobtitles_de_fr_it_path = r'C:\Users\danie\Desktop\Python\Praca\Jobboard\isco_jobtitles_de_fr_it.json'
-
-        # self.skills_path = r'/home/tobiasz/python_scripts/skills.txt'
-        # self.db_config_path = r'/home/tobiasz/python_scripts/db_config.json'
-        # self.locations_path = r'/home/tobiasz/python_scripts/locations.json'
-        # self.companies_sectors_map_path = r'/home/tobiasz/python_scripts/companies_sectors_map.json'
-        # self.companies_sectors_linkedin_path = r'/home/tobiasz/python_scripts/companies_sectors_linkedin_shaved.json'
-        # self.isco_jobtitles_en_path = r'/home/tobiasz/python_scripts/isco_jobtitles_en.json'
-        # self.isco_jobtitles_de_fr_it_path = r'/home/tobiasz/python_scripts/isco_jobtitles_de_fr_it.json'
+        self.skills_path = r'path\skills.txt'
+        self.db_config_path = r'path\db_config.json'
+        self.locations_path = r'path\locations.json'
+        self.companies_sectors_map_path = r'path\companies_sectors_map.json'
+        self.companies_sectors_linkedin_path = r'path\companies_sectors_linkedin_shaved.json'
+        self.isco_jobtitles_en_path = r'path\isco_jobtitles_en.json'
+        self.isco_jobtitles_de_fr_it_path = r'path\isco_jobtitles_de_fr_it.json'
 
         self.jobboard_country = country
         self.jobboard_name = jobboard
@@ -793,9 +785,9 @@ class JobboardScraper:
 
 
     def send_email(self, subject, message):
-        email = 'horacy.niew@gmail.com'
-        password = 'sjf!2#abc'
-        send_to_email = 'tobias.talaj@gmail.com'
+        email = 'xxx@gmail.com'
+        password = 'pwd'
+        send_to_email = 'yyy@gmail.com'
 
         msg = MIMEMultipart()
         msg['From'] = email
