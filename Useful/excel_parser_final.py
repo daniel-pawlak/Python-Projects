@@ -3,7 +3,7 @@ from flashtext import KeywordProcessor
 from unidecode import unidecode
 from openpyxl import load_workbook
 
-wb = load_workbook(r'C:\Users\danie\Desktop\Python\Praca\Jobboard\SelectedCompanies - Top 50.xlsx')
+wb = load_workbook(r'path\SelectedCompanies - Top 50.xlsx')
 
 sheet_obj = wb.active 
 max_col = sheet_obj.max_column 
@@ -14,7 +14,7 @@ for i in range(1, max_row + 1):
     full_description = sheet_obj.cell(row = i, column = 13).value
     skills = ''
 
-    skills_path = r'C:\Users\danie\Desktop\Python\Praca\Jobboard\skills.txt'
+    skills_path = r'path\skills.txt'
 
     with open(skills_path, 'r', encoding='utf8') as f:
         skills_list = f.read()
