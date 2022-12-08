@@ -13,7 +13,7 @@ import pyperclip
 import json
 
 
-db_config_path = r'C:\Users\danie\Desktop\Python\Scrapers\LinkedIn\db_config.json'
+db_config_path = r'path\db_config.json'
 with open(db_config_path, 'r', encoding='utf8') as f:
     db_config = json.load(f)
 
