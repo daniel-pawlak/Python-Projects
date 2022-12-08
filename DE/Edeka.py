@@ -15,7 +15,7 @@ import regex as re
 
 url = 'https://verbund.edeka/karriere/stellenb%C3%B6rse/#/?levels=27412,27413,27414,27411'
 
-path = r'C:\Users\lnhelper\Desktop\LinkedIn CR\chromedriver.exe'
+path = r'path\chromedriver.exe'
 
 driver = webdriver.Chrome(path)
 driver.get(url)
