@@ -228,7 +228,7 @@ def pdf_recognizer(pdf_name, row, directory, file_format):
     def rectangles_rec(img_name):
         # look for rectangles that have information whether it is marked as signed or not in case of having no common signature
         # read image into array
-        image_array = cv2.imread('C:\\Users\\danie\\Desktop\\UPS - Examples\\Images\\{}.jpg'.format(img_name))     # may be changed
+        image_array = cv2.imread('path\Images\\{}.jpg'.format(img_name))     # may be changed
 
         # convering image to gray scale
         gray_scale_image = cv2.cvtColor(image_array, cv2.COLOR_BGR2GRAY)
